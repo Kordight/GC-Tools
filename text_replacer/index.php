@@ -38,8 +38,6 @@ $conn->close();
         const patterns = <?php echo json_encode($patterns); ?>;
     </script>
     <script src="script.js"></script>
-    <h2>Przetworzony tekst:</h2>
-    <div id="output-text" class="output"></div>
     <button id="copy-button" type="button" onclick="copyToClipboard()">Kopiuj do schowka</button>
 
 </body>
