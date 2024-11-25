@@ -6,7 +6,7 @@ function escapeRegExp(string) {
 function processText() {
     const inputText = document.getElementById('input-text').value;
     let outputText = inputText;
-    const button = document.getElementById('process-button');
+    const button = document.getElementById('copy-button');
 
     // Usuń wszystkie wzorce z tekstu
     patterns.forEach(pattern => {

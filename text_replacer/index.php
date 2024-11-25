@@ -30,7 +30,7 @@ $conn->close();
     <form id="text-form">
         <label for="input-text">Wprowadź tekst:</label>
         <textarea id="input-text" placeholder="Wprowadź tekst do przetworzenia..."></textarea>
-        <button id="process-button" type="button" onclick="processText()">Usuń fragmenty</button>
+        <button type="button" onclick="processText()">Usuń fragmenty</button>
     </form>
     <h2>Przetworzony tekst:</h2>
     <div id="output-text" class="output"></div>
