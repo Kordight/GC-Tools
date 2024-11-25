@@ -38,7 +38,7 @@ $conn->close();
         const patterns = <?php echo json_encode($patterns); ?>;
     </script>
     <script src="script.js"></script>
-    <button id="copy-button" type="button" onclick="copyToClipboard()">Kopiuj do schowka</button>
+    <button id="copy-button" type="button" onclick="copyToClipboard()" disabled>Kopiuj do schowka</button>
 
 </body>
 

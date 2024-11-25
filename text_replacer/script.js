@@ -6,6 +6,7 @@ function escapeRegExp(string) {
 function processText() {
     const inputText = document.getElementById('input-text').value;
     let outputText = inputText;
+    const button = document.getElementById('process-button');
 
     // Usuń wszystkie wzorce z tekstu
     patterns.forEach(pattern => {
@@ -13,7 +14,7 @@ function processText() {
         const regex = new RegExp(escapedPattern, 'g');
         outputText = outputText.replace(regex, '');
     });
-
+    button.disabled = inputText.value.trim() === '';
     document.getElementById('output-text').innerText = outputText.trim();
 }
 
