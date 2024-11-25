@@ -4,9 +4,9 @@ function escapeRegExp(string) {
 }
 
 function processText() {
+    console.log("process"); // Debugowanie
     const inputText = document.getElementById('input-text').value;
     let outputText = inputText;
-    const button = document.getElementById('copy-button');
 
     // Usuń wszystkie wzorce z tekstu
     patterns.forEach(pattern => {
@@ -14,9 +14,15 @@ function processText() {
         const regex = new RegExp(escapedPattern, 'g');
         outputText = outputText.replace(regex, '');
     });
-    button.disabled = (outputText.length > 0);
 
+    const outputTextElement = document.getElementById('output-text');
+    outputTextElement.textContent = outputText; 
+
+
+    const copyButton = document.getElementById('copy-button');
+    copyButton.disabled = outputText.trim().length === 0;
 }
+
 
 function copyToClipboard() {
     const outputTextElement = document.getElementById('output-text');
