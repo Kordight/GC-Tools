@@ -14,7 +14,7 @@ function processText() {
         const regex = new RegExp(escapedPattern, 'g');
         outputText = outputText.replace(regex, '');
     });
-    button.disabled = inputText.value.trim() === '';
+    button.disabled = inputText.trim() === '';
     document.getElementById('output-text').innerText = outputText.trim();
 }
 
