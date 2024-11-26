@@ -32,13 +32,15 @@ $conn->close();
         <textarea id="input-text" placeholder="Wprowadź tekst do przetworzenia..."></textarea>
         <button type="button" onclick="processText()">Usuń fragmenty</button>
     </form>
+    <br>
+    <button id="copy-button" type="button" onclick="copyToClipboard()" disabled>Kopiuj do schowka</button>
     <h2>Przetworzony tekst:</h2>
     <div id="output-text" class="output"></div>
     <script>
         const patterns = <?php echo json_encode($patterns); ?>;
     </script>
     <script src="script.js"></script>
-    <button id="copy-button" type="button" onclick="copyToClipboard()" disabled>Kopiuj do schowka</button>
+
 
 </body>
 
